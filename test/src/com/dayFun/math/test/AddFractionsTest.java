@@ -23,6 +23,12 @@ public class AddFractionsTest {
     public void testZeroPlusNonZero() throws Exception {
         Fraction sum = new Fraction(0).plus(new Fraction(5));
         assertEquals(5, sum.intValue());
+    }
+
+    @Test
+    public void testNonNegativeNonZeroPlusNonNegativeNonZero() throws Exception {
+        Fraction sum = new Fraction(5).plus(new Fraction(5));
+        assertEquals(10, sum.intValue());
 
     }
 }
