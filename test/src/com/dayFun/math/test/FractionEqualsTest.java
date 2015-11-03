@@ -33,5 +33,5 @@ public class FractionEqualsTest {
         assertNotEquals(new Fraction(3), new Fraction(2));
     }
 
-    
+
 }
