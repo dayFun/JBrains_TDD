@@ -2,7 +2,8 @@ package com.dayFun.math.test;
 
 import org.junit.Test;
 
-import static junit.framework.Assert.assertEquals;
+import static com.dayFun.math.NumberTheory.gcd;
+import static org.junit.Assert.assertEquals;
 
 public class GreatestCommonDivisorTest {
 
@@ -30,21 +31,12 @@ public class GreatestCommonDivisorTest {
     public void testCommonFactor() throws Exception {
         assertEquals(2, gcd(6, 8));
         assertEquals(7, gcd(49, 315));
-        assertEquals(4, gcd(-24, -32));
+        assertEquals(8, gcd(-24, -32));
     }
 
     @Test
     public void testNegatives() throws Exception {
         assertEquals(4, gcd(-24, 28));
-        assertEquals(-4, gcd(24, -28));
-    }
-
-    private int gcd(int a, int b) {
-        while (b != 0) {
-            int t = b;
-            b = a % t;
-            a = t;
-        }
-        return Math.abs(a);
+        assertEquals(4, gcd(24, -28));
     }
 }
